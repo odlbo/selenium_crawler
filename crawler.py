@@ -91,8 +91,6 @@ def _iterate_over_emails(driver) -> t.Generator[Email, None, None]:
             is_something_new = True
             collected_emails[lnk] = email
 
-        break
-
         if is_something_new:
             actions.move_to_element(lnk_el).perform()
         else:
